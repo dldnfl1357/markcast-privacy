@@ -4,6 +4,9 @@
 
 개발자 / Developer: `dldnfl1357`
 
+- Privacy policy: https://dldnfl1357.github.io/markcast-privacy/
+- Support: https://dldnfl1357.github.io/markcast-privacy/support.html
+
 ## 한국어
 
 MarkCast는 사용자의 개인정보와 문서를 최소한으로 처리하도록 설계된 마크다운 음성 리더입니다.
@@ -34,7 +37,7 @@ Android 앱은 인터넷 권한이나 광범위한 사진·미디어·저장소 
 
 ### 정책 변경 및 문의
 
-앱의 데이터 처리 방식이 바뀌면 이 문서의 시행일과 내용을 갱신합니다. 개인정보 관련 문의는 [GitHub의 dldnfl1357 프로필](https://github.com/dldnfl1357)을 통해 남길 수 있습니다.
+앱의 데이터 처리 방식이 바뀌면 이 문서의 시행일과 내용을 갱신합니다. 개인정보 관련 문의는 [MarkCast 지원 페이지](https://dldnfl1357.github.io/markcast-privacy/support.html)를 통해 남길 수 있습니다.
 
 ## English
 
@@ -66,4 +69,4 @@ The app intentionally collects no personal data from anyone, including children.
 
 ### Changes and contact
 
-If the app's data practices change, this policy and its effective date will be updated. Privacy questions can be submitted through the [dldnfl1357 GitHub profile](https://github.com/dldnfl1357).
+If the app's data practices change, this policy and its effective date will be updated. Privacy questions can be submitted through the [MarkCast support page](https://dldnfl1357.github.io/markcast-privacy/support.html).
