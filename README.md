@@ -17,11 +17,11 @@ MarkCast 개발자는 개인정보, 사용 기록, 기기 식별자, 위치, 진
 
 ### 사용자가 선택한 문서
 
-앱은 시스템 파일 선택기를 통해 사용자가 직접 선택한 파일에만 접근합니다. 문서 내용은 화면 표시와 음성 읽기를 위해 실행 중 메모리에서 처리됩니다. 개발자 서버로 업로드하거나 앱이 관리하는 데이터베이스에 영구 저장하지 않습니다. 다른 문서를 열거나 앱 프로세스가 종료되면 메모리에 있던 내용은 해제되며, 앱을 삭제하면 운영체제가 관리하던 임시 파일도 함께 제거됩니다.
+앱은 시스템 파일 선택기를 통해 사용자가 직접 선택한 파일에만 접근합니다. 문서 내용은 화면 표시와 음성 읽기를 위해 실행 중 메모리에서 처리됩니다. 개발자 서버로 업로드하거나 앱이 관리하는 데이터베이스에 영구 저장하지 않습니다. 파일 선택기가 호환성을 위해 임시 복사본을 만든 경우 앱은 바이트를 읽은 직후 삭제를 요청합니다. 다른 문서를 열거나 앱 프로세스가 종료되면 메모리에 있던 내용은 해제됩니다.
 
 ### 시스템 음성 합성
 
-MarkCast는 별도의 클라우드 음성 서비스를 사용하지 않고 Android 또는 iOS가 제공하는 시스템 TTS API에 읽을 텍스트를 전달합니다. 사용자가 선택한 운영체제 음성 엔진이나 네트워크 음성은 해당 제공자의 정책에 따라 데이터를 처리할 수 있습니다. MarkCast 개발자는 그 처리 결과나 문서 내용을 수신하지 않습니다. 완전한 오프라인 처리를 원하면 기기 설정에서 오프라인 음성을 내려받아 선택할 수 있습니다.
+MarkCast는 별도의 클라우드 음성 서비스를 사용하지 않고 Android 또는 iOS가 제공하는 시스템 TTS API에 읽을 텍스트를 전달합니다. Android에서는 설치되어 있고 네트워크 연결이 필요하지 않은 음성을 우선합니다. 사용할 수 있는 오프라인 음성이 없으면 사용자가 선택한 운영체제 음성 엔진이나 네트워크 음성이 해당 제공자의 정책에 따라 데이터를 처리할 수 있습니다. MarkCast 개발자는 그 처리 결과나 문서 내용을 수신하지 않습니다.
 
 ### 권한과 보안
 
@@ -49,11 +49,11 @@ The MarkCast developer does not collect or share personal information, usage his
 
 ### Documents selected by the user
 
-The app accesses only files that the user explicitly selects through the operating system file picker. Document content is processed in runtime memory for display and speech. It is not uploaded to a developer server or permanently stored in an app-managed database. The in-memory content is released when another document is opened or the app process ends. Operating-system-managed temporary files are removed when the app is uninstalled.
+The app accesses only files that the user explicitly selects through the operating system file picker. Document content is processed in runtime memory for display and speech. It is not uploaded to a developer server or permanently stored in an app-managed database. If the picker creates a temporary compatibility copy, the app requests its removal immediately after reading the bytes. In-memory content is released when another document is opened or the app process ends.
 
 ### System text-to-speech
 
-MarkCast does not use a separate cloud speech service. It passes readable text to the system TTS API provided by Android or iOS. An operating-system speech engine or network voice selected by the user may process text under its provider's policy. The MarkCast developer does not receive that text or the synthesis result. Users who require fully offline processing can download and select an offline voice in device settings.
+MarkCast does not use a separate cloud speech service. It passes readable text to the system TTS API provided by Android or iOS. On Android, the app prefers an installed voice that does not require a network connection. If no offline voice is available, an operating-system speech engine or network voice selected by the user may process text under its provider's policy. The MarkCast developer does not receive that text or the synthesis result.
 
 ### Permissions and security
 

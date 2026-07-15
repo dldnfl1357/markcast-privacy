@@ -39,9 +39,9 @@
       <h3>수집하거나 공유하는 데이터</h3>
       <p>MarkCast 개발자는 개인정보, 사용 기록, 기기 식별자, 위치, 진단 정보 또는 문서 내용을 수집하거나 제3자와 공유하지 않습니다. 앱에는 계정, 광고, 분석 SDK, 추적 기술과 개발자 운영 백엔드 서버가 없습니다.</p>
       <h3>사용자가 선택한 문서</h3>
-      <p>앱은 시스템 파일 선택기를 통해 사용자가 직접 선택한 파일에만 접근합니다. 문서 내용은 화면 표시와 음성 읽기를 위해 실행 중 메모리에서 처리되며 개발자 서버로 업로드하거나 영구 저장하지 않습니다.</p>
+      <p>앱은 시스템 파일 선택기를 통해 사용자가 직접 선택한 파일에만 접근합니다. 문서 내용은 화면 표시와 음성 읽기를 위해 실행 중 메모리에서 처리되며 개발자 서버로 업로드하거나 영구 저장하지 않습니다. 파일 선택기가 임시 복사본을 만든 경우 앱은 바이트를 읽은 직후 삭제를 요청합니다.</p>
       <h3>시스템 음성 합성</h3>
-      <p>MarkCast는 별도의 클라우드 음성 서비스를 사용하지 않고 Android 또는 iOS의 시스템 TTS API에 읽을 텍스트를 전달합니다. 사용자가 선택한 운영체제 음성 엔진이나 네트워크 음성은 해당 제공자의 정책에 따라 처리할 수 있으며, MarkCast 개발자는 그 텍스트나 결과를 수신하지 않습니다. 완전한 오프라인 처리를 원하면 기기 설정에서 오프라인 음성을 내려받아 선택할 수 있습니다.</p>
+      <p>MarkCast는 별도의 클라우드 음성 서비스를 사용하지 않고 Android 또는 iOS의 시스템 TTS API에 읽을 텍스트를 전달합니다. Android에서는 설치되어 있고 네트워크가 필요하지 않은 음성을 우선합니다. 오프라인 음성이 없으면 사용자가 선택한 운영체제 음성 엔진이나 네트워크 음성이 해당 제공자의 정책에 따라 처리할 수 있으며, MarkCast 개발자는 그 텍스트나 결과를 수신하지 않습니다.</p>
       <h3>권한, 보관과 삭제</h3>
       <p>Android 앱은 인터넷 권한이나 광범위한 사진·미디어·저장소 권한을 요청하지 않으며 원격 마크다운 이미지를 자동 다운로드하지 않습니다. 개발자가 수집·보관하는 서버 데이터는 없습니다. 다른 문서를 열거나 앱을 완전히 종료하면 현재 문서를 메모리에서 제거할 수 있습니다.</p>
       <h3>아동, 변경 및 문의</h3>
@@ -54,9 +54,9 @@
       <h3>Data collected or shared</h3>
       <p>The developer does not collect or share personal information, usage history, device identifiers, location, diagnostics, or document content. The app has no accounts, advertising, analytics SDKs, tracking technology, or developer-operated backend.</p>
       <h3>User-selected documents</h3>
-      <p>The app accesses only files explicitly selected through the system file picker. Content is processed in runtime memory for display and speech; it is not uploaded to a developer server or permanently stored.</p>
+      <p>The app accesses only files explicitly selected through the system file picker. Content is processed in runtime memory for display and speech; it is not uploaded to a developer server or permanently stored. If the picker creates a temporary copy, the app requests its removal immediately after reading the bytes.</p>
       <h3>System text-to-speech</h3>
-      <p>MarkCast uses the Android or iOS system TTS API instead of a separate cloud speech service. A system speech engine or network voice selected by the user may process text under its provider's policy. The MarkCast developer does not receive the text or result. Users who require fully offline processing can download and select an offline voice in device settings.</p>
+      <p>MarkCast uses the Android or iOS system TTS API instead of a separate cloud speech service. On Android, it prefers an installed voice that does not require a network connection. If no offline voice is available, a system speech engine or network voice selected by the user may process text under its provider's policy. The MarkCast developer does not receive the text or result.</p>
       <h3>Permissions, retention, and deletion</h3>
       <p>The Android app requests neither internet access nor broad photo, media, or storage permissions, and remote Markdown images are not downloaded. The developer retains no server data. Opening another file or fully closing the app removes the current document from memory.</p>
       <h3>Children, changes, and contact</h3>
